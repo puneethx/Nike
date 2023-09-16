@@ -2,8 +2,11 @@ import { nikeName } from '../assets/images';
 import { hamburger } from '../assets/icons';
 import { navLinks } from '../constants';
 import "./header.css";
+import Menu from "./Menu"
+import React,{useState} from 'react';
 
 const Nav = () => {
+  const [open,setOpen] = useState(null);
   return (
     <header className='header fixed padding-x py-0 z-50 w-full'>
         <nav className='flex justify-between gap-40 items-center max-container'>
@@ -27,7 +30,7 @@ const Nav = () => {
                 </li>
               ))}
             </ul>
-            <div className='lg:hidden'>
+            <div className='lg:hidden' onClick={()=> setOpen(!open)}>
               <img
                 src={hamburger}
                 alt='Hamburger'
@@ -36,6 +39,7 @@ const Nav = () => {
               />
             </div>
         </nav>
+        {open && <Menu/>}
     </header>
   )
 }

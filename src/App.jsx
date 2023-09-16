@@ -1,7 +1,9 @@
 import { CustomerReviews, Hero, PopularProducts, Subscribe, SpecialOffer, Footer, SuperQuality, Services } from "./sections";
 import Nav from './components/Nav';
+import "./app.css";
 
 const App = () => (
+  <div className="main ">
   <main className="relative bg-black">
     <Nav/>
     <section className="xl:padding-l wide:padding-r padding-b">
@@ -29,6 +31,7 @@ const App = () => (
       <Footer/>
     </section>
   </main>
+  </div>
 );
 
 export default App;
