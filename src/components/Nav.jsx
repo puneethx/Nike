@@ -1,10 +1,11 @@
 import { nikeName } from '../assets/images';
 import { hamburger } from '../assets/icons';
 import { navLinks } from '../constants';
+import "./header.css";
 
 const Nav = () => {
   return (
-    <header className='padding-x py-8 absolute z-10 w-full'>
+    <header className='header fixed padding-x py-0 z-50 w-full'>
         <nav className='flex justify-between gap-40 items-center max-container'>
             <a href="/">
                 <img
@@ -19,7 +20,7 @@ const Nav = () => {
                 <li key={item.label}>
                   <a
                     href={item.href}
-                    className='font-montserrat leading-normal text-lg text-slate-gray'
+                    className='font-montserrat leading-normal text-lg text-white'
                   >
                     {item.label}
                   </a>
